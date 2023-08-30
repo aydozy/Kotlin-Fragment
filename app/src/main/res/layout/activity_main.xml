@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/firstButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91dp"
+        android:onClick="firstFragment"
+        android:text="1st"
+        app:layout_constraintBaseline_toBaselineOf="@+id/secondButton"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout" />
+
+    <Button
+        android:id="@+id/secondButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginBottom="35dp"
+        android:onClick="secondFragment"
+        android:text="2nd"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintStart_toEndOf="@+id/firstButton" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="492dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
